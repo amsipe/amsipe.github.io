@@ -1,56 +1,45 @@
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial;
-}
-
 body {
-  margin: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+a {
+	text-decoration: none;
 }
 
-form {
-  max-width: 400px;
-  margin: 2rem 0 0 5%;
+header {
+	background-color: #193441;
+	width: 100%;
+	float: left;
+
 }
 
-h1 {
-  width: 300px;
-  text-align: center;
+
+#main-logo {
+	margin: 0;
+	text-align: : center;
+	width: 200px;
+	color: #D1DBBD;
 }
 
-form label {
-  display: inline-block;
-  width: 150px;
-  clear: left;
+h1{
+	margin-left: 5%;
+}
+nav {
+	float: right;
+	margin-right: 8%;
 }
 
-form input {
-  width: 150px;
-  margin-bottom: 5px;
+nav ul {
+	list-style-type: none;
+	
+	margin: 10px 12px;
+	text-align: : center;
 }
 
-form input[type="submit"] {
-  margin-left: 155px;
+nav li {
+	display: inline-block;
 }
 
-table {
-  width: 90%;
-  background-color: #EEE;
-  margin: 2rem auto 5rem;
-  border-collapse: collapse;
-}
-
-thead {
-  background-color: #333;
-  color: white;
-}
-
-tr {
-  border-bottom: 1px solid black;
-}
-
-th, td {
-  text-align: center;
-  padding: .5rem 0;
+nav a {
+	padding: 10px 12px;
+	color: #FCFFF5;
 }

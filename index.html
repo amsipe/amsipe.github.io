@@ -1,64 +1,45 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Gateway Start</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+	<meta charset="UTF-8">
+	<title>Anderson Sipe</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-  <form>
-    <h1>Contacts</h1>
-    <label for="firstname">Firstname:</label>
-    <input id="firstname" type="text" name="firstname" >
-    
-    <label for="lastname">Lastname:</label>
-    <input id="lastname" type="text" name="lastname">
-    
-    <label for="address">Address:</label>
-    <input id="address" type="text" name="address">
+	<header>
+		<a href="index.html" id="main-logo">
+			<h1>Anderson Sipe</h1>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Resume</a></li>
+				<li><a href="#">About Me</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Contact Me</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+	<div id="content-home">
+		<section>
+			<img src="img/portrait.jpg" alt="Portrait of Anderson Sipe">
+			<div>
+				<h2>Welcome</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+			</div>
+			<div>
+				<h2>ITA Details</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum</p>
+			</div>
+		</section>
+	</div>
 
-    <label for="city">City:</label>
-    <input id="city" type="text" name="city">
-
-    <label for="state">State:</label>
-    <input id="state" type="text" name="state" size="5">
-    
-    <label for="zip">Zip:</label>
-    <input id="zip" type="text" name="zip" size="5">
-    
-    <label for="phone">Phone:</label>
-
-    <input id="phone" type="text" name="phone">
-    
-    <label for="email">Email:</label>
-    <input id="email" type="email" name="email">
-    
-    <input type="submit" value="Submit" id="submit" onclick = "return addContact()">
-</form>
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Delete</th>
-        </tr>
-    </thead>
-    <tbody id='container'>
-    </tbody>
-</table>
-  
-    <script src="js/index.js"></script>
-
+	<footer>
+		<p>&copy; 2017</p>
+		<a href="#"><img src="img/linkedin.png" alt="LinkedIn Icon"></a>
+	</footer>
 </body>
 </html>
