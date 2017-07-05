@@ -1,23 +1,9 @@
 body {
 	font-family: 'Open Sans', sans-serif;
+	margin: 0;
 }
 a {
 	text-decoration: none;
-}
-
-header {
-	background-color: #193441;
-	width: 100%;
-	float: left;
-
-}
-
-
-#main-logo {
-	margin: 0;
-	text-align: : center;
-	width: 200px;
-	color: #D1DBBD;
 }
 
 h1{
@@ -25,14 +11,21 @@ h1{
 }
 nav {
 	float: right;
-	margin-right: 8%;
+	
+	text-align: center;
+	margin: 60px 10px;
+
+
 }
 
+
+
+
 nav ul {
-	list-style-type: none;
+	list-style: none;
 	
 	margin: 10px 12px;
-	text-align: : center;
+	text-align: center;
 }
 
 nav li {
@@ -42,4 +35,57 @@ nav li {
 nav a {
 	padding: 10px 12px;
 	color: #FCFFF5;
+}
+
+header {
+	
+	background-color: #193441;
+	width: 100%;
+	margin-bottom: 60px;
+	border-bottom: solid 5px black;
+	height: 100px;
+
+	
+
+}
+
+#main-logo {
+	float: left;
+	margin: 20px 30px;
+	text-align: left;
+	width: 45%;
+	color: #D1DBBD;
+}
+
+.portrait {
+
+	display: block;
+	
+	max-width: 140px;
+	border-radius: 10%;
+	float: left;
+	margin: 0 8% 10px 0;
+
+}
+
+#content-home,#content-projects {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#ita-details {
+	display: block;
+	float: left;
+	
+}
+
+footer {
+	clear: both;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.social {
+	height: 20px;
+	width: 20px;
 }
