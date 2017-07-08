@@ -68,7 +68,7 @@ header {
 
 }
 
-#content-home,#content-projects {
+#content-home,#content-projects,#content-resume {
 	max-width: 900px;
 	margin: 0 auto;
 }
@@ -88,4 +88,31 @@ footer {
 .social {
 	height: 20px;
 	width: 20px;
+}
+
+/* RESUME */
+
+.resume-right {
+	display: inline-block;
+	width: 30%;
+	height: 150px;
+	float: left;
+	border: 1px solid #CCC;
+	border-left: none;
+	padding-left: 20px;
+	
+}
+.resume-right ul,
+.resume-left ul {
+	list-style: none;
+}
+.resume-left {
+	display: inline-block;
+	width: 60%;
+	float: left;
+	height: 150px;
+	padding-left: 10px;
+	border: 1px solid #CCC;
+
+	
 }
