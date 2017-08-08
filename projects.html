@@ -3,40 +3,57 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Anderson Sipe</title>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|PT+Sans+Narrow:700" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
-		<a href="index.html" id="main-logo"><h1>Anderson Sipe</h1></a>
-		<nav>
+		<a href="index.html" id="main-logo">
+			<h1>Anderson Sipe</h1>
+			<h3><span id="pipe">|</span>   ITA Participant</h3>
+		</a>
+		<nav id="nav-menu">
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="projects.html">Projects</a></li>
 				<li><a href="resume.html">Resume</a></li>
-				<li><a href="#">About Me</a></li>
+				<li><a href="about.html">About Me</a></li>
 				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="#">Contact Me</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
-		
-	</header>
-	<div id="content-projects">
-		<h2>Past Projects</h2>
-		<p>Check out the list below for examples of previous work.</p>
-		<ul>
-			<li><a href="#">Javascript</a></li>
-			<li><a href="#">HTML/CSS</a></li>
-			<li><a href="#">PHP</a></li>
-			<li><a href="#">Node.js</a></li>
-			<li><a href="#">jquery</a></li>
-		</ul>
-	</div>
 
-	<footer>
-		
-		<a href="https://www.linkedin.com/in/anderson-sipe-59639638/"><img src="img/linkedin.png" alt="LinkedIn Icon" class="social"></a>
-		<p>&copy; 2017</p>
-	</footer>
+	</header>
+	<div id="wrapper">
+		<div id="content-projects">
+			<h2>Past Projects</h2>
+			<p>Check out the list below for examples of previous work.</p>
+			<ul class="projects-list">
+				<li><a href="#">Address Book</a></li>
+					<div class="projects-sublist" style="display: none">
+						<ul>
+							<li>An address book app that will take field inputs and add to table on submit.</li>
+							<li>First and last name are required fields.</li>
+							<li>Inputs must be in correct format (E.G. Email - something@gmail.com)</li>
+							<li>Contact list must re-alphabetize on submit.</li>
+						</ul>
+						<p>Click <a href="#">here</a> for codepen.</p>
+					</div>
+				<li><a href="#">HTML/CSS</a></li>
+				<li><a href="#">PHP</a></li>
+				<li><a href="#">Node.js</a></li>
+				<li><a href="#">jquery</a></li>
+			</ul>
+		</div>
+
+		<footer>
+
+			<a href="https://www.linkedin.com/in/anderson-sipe-59639638/"><img src="img/linkedin.png" alt="LinkedIn Icon" class="social"></a>
+			<p>&copy; 2017</p>
+		</footer>
+	</div>
+	<script src="js/app.js"></script>
 </body>
 </html>
