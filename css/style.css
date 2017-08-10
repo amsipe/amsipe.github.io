@@ -25,9 +25,12 @@ header {
 #nav-menu {
 	float: right;
 	margin-right: 30px;
-	border-bottom: 1px solid transparent;
-	border
-	transition: border-bottom 300ms ease-in;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 50px;
+	position: relative;
+	/*z-index: 1;*/
+	transition: border-bottom 500ms ease-out,
+							padding-bottom 500ms ease-out;
 
 	line-height: 50px;
 	text-align: center;
@@ -35,13 +38,14 @@ header {
 }
 
 #nav-menu:hover {
-		border-bottom: 1px solid black;
-
+		padding-bottom: 0px;
+		border-bottom: 2px solid #CCC;
+		/*transform: translateY(-5px);*/
 
 }
 
 #nav-menu li:hover > a {
-		transform: translate(0px,5px);
+		transform: translate(0px,3px);
 		/*transform: scale(1.1);*/
 }
 
@@ -77,7 +81,7 @@ header {
 	color: black;
 	margin-left: 30px;
 	line-height: 60px;
-	vertical-align: center;
+	vertical-align: middle;
 
 }
 
@@ -138,23 +142,7 @@ header {
 
 }
 
-
-
-
-/*header {
-	float: left;
-	background-color: #193441;
-	width: 100%;
-	margin-top: 0;
-	margin-bottom: 60px;
-	border-bottom: solid 5px black;
-	display: block;
-	background: linear-gradient(#3E606F 20%, #193441 80%);
-
-}*/
-
 #wrapper h1 {
-	/* margin-left: 5%; */
 	margin: 10px 0;
 	font-size: 1.85em;
 }
@@ -177,7 +165,9 @@ header {
 	margin: 0 8% 10px 0;
 
 }
-
+#content-home h2 {
+	margin: 8px 0;
+}
 #content-home,#content-projects,#content-resume,#content-gallery {
 	display: block;
 	max-width: 900px;
@@ -229,35 +219,10 @@ footer {
 }
 
 /************* RESUME */
-.resume-left {
-	display: block;
-	width: 60%;
-	height: 150px;
-	float: left;
-	/*height: 150px;*/
-	/*padding-left: 10px;*/
-	/*border: 1px solid #CCC;*/
 
-
-}
-.resume-right {
-	display: block;
-	float: left;
-	width: 40%;
-	height: 150px;
-
-	/*border: 1px solid #CCC;*/
-	/*border-left: none;
-	padding-left: 20px;*/
-
-}
-.resume-right ul,
-.resume-left ul {
+/*#content-resume ul {
 	list-style: none;
-}
-#content-resume ul {
-	list-style: none;
-}
+}*/
 #content-resume a {
 	color: #13B5FF;
 }
@@ -266,16 +231,33 @@ footer {
 	font-style: italic;
 }
 
-
+#content-resume h2 {
+	margin: 8px 0;
+}
+.resume-header ul {
+	list-style: none;
+}
+.job-title {
+	float: left;
+	display: inline-block;
+}
+.job-date {
+	float: right;
+	display: inline-block;
+	line-height: 1.15em;
+}
 .resume-exp, .resume-skills, .resume-header {
 	border-bottom: solid 1px #CCC;
 	margin: 5px 0;
 
 }
-
+ul.job-list {
+	list-style: disc;
+	padding-left: 20px;
+}
 .job-desc {
-	margin-bottom: 5px;
-
+	margin: 3px 0;
+  clear: both;
 }
 .job-date {
 	font-size: 14px;
@@ -286,14 +268,17 @@ div.resume-skills h3 {
 	margin-bottom: 5px;
 }
 
-li.jobs-title > h3 {
+li.job-title > h3 {
 	padding-left: 0px;
 
 }
 
+.resume-skills ul {
+	list-style: none;
 
-#jobs {
-	float: left;
+}
+.resume-skills li.job-desc {
+	padding-left: 5px;
 }
 
 /*********PROJECTS*******/
@@ -308,22 +293,29 @@ li.jobs-title > h3 {
 	height: 40px;
 	background-color: #083470;
 	border-radius: 3px;
-	margin: 0 auto;
+	color: white;
+	margin: 3px auto;
 	text-align: center;
-	border: 1px solid red;
 	line-height: 40px;
 }
 
-.projects-list li a {
-	vertical-align: middle;
-	display: block;
-	color: white;
-
+.downArrow:after {
+	content: "\2228";
+	padding-left: 8px;
+	font-size: 16px;
 }
-.projects-sublist {
 
+.upArrow:after {
+	content: "\2227";
+	padding-left: 8px;
+	font-size: 16px;
+}
+
+.projects-sublist {
 	padding-left: 60px;
 	font-size: .85em;
+
+
 }
 .projects-sublist ul {
 	list-style: disc;
@@ -336,6 +328,69 @@ li.jobs-title > h3 {
 	width: 75%;
 	margin: 8px auto;
 }
+
+.projects-sublist a {
+	color: #1F44FF;
+}
+
+.noneDisplay {
+	display: none;
+}
+
+.opacityHidden {
+	opacity: 1;
+}
+
+#content-projects h2 {
+	margin-bottom: 8px;
+}
+
+/******CONTACT******/
+
+#content-contact {
+	width: 40%;
+	margin: 0 auto;
+	border: 1px solid #777;
+	border-radius: 5px;
+	background-color: white;
+
+}
+
+#contactForm {
+	padding: 20px;
+}
+#contactForm label {
+	display: block;
+	margin-top: 10px;
+}
+
+#contactForm input {
+	height: 25px;
+	width: 200px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	font-size: 14px;
+}
+
+#contactForm h2 {
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+#contactForm input[type="submit"] {
+	display: block;
+	font-size: 14px;
+	margin-top: 15px;
+	width: 100px;
+	background-color: #1F44FF;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
 /*
 @media screen and (min-width: 480px) {
 
