@@ -28,47 +28,30 @@
 
 	</header>
 	<div id="wrapper">
-		<div id="content-gallery">
-			<section>
-				<ul>
-					<li><a href="img/numbers-01.jpg">
-							<img src="img/numbers-01.jpg" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/numbers-01.jpg">
-							<img src="img/numbers-02.jpg" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/numbers-01.jpg">
-							<img src="img/numbers-06.jpg" alt="">
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/numbers-01.jpg">
-							<img src="img/numbers-09.jpg" alt="">
-							<p>Lorem ipsum dolor sit amet,</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/numbers-01.jpg">
-							<img src="img/numbers-12.jpg" alt="">
-							<p>Lorem ipsum dolor sit amet,</p>
-						</a>
-					</li>
-				</ul>
-			</section>
+		<div id="content-contact">
+			<form onsubmit="return checkFields();">
+				<div id="contactForm">
+					<h2>Contact Me</h2>
+					<label for="formName">Name:</label>
+					<input type="text" name="formName" id="formName">
+					<label for="formPhone">Phone:</label>
+					<input type="text" name="formPhone" id="formPhone">
+					<label for="formEmail">Email:</label>
+					<input type="text" name="formEmail" id="formEmail">
+					<label for="formCompany">Company:</label>
+					<input type="text" name="formCompany" id="formCompany">
+					<label for="formText">Comments:</label>
+					<textarea name="formText" rows="8" cols="40" id="formText"></textarea>
+					<input type="submit" name="submit" value="Submit" id="formSubmit">
+				</div>
+			</form>
 		</div>
 
 		<footer>
-
 			<a href="https://www.linkedin.com/in/anderson-sipe-59639638/"><img src="img/linkedin.png" alt="LinkedIn Icon" class="social"></a>
-			<p>&copy; 2017</p>
+			<p>&copy; 2017 Anderson Sipe</p>
 		</footer>
 	</div>
+	<script src="js/app.js"></script>
 </body>
 </html>
