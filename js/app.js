@@ -25,11 +25,51 @@ projectsList.forEach(function(c){
 CONTACT FORM
 *******/
 
-function checkFields(){
+function checkFields(e){
 
-  var nameValue = document.getElementById("formName").value;
-  var phoneValue = document.getElementById("formPhone").value;
-  var emailValue = document.getElementById("formEmail").value;
-  console.log(nameValue, phoneValue, emailValue);
-  return false;
+  var formIDs = document.querySelectorAll('#formName,#formPhone,#formEmail');
+  console.log(formIDs);
+  // var formName = document.getElementById("formName");
+  // var formPhone = document.getElementById("formPhone");
+  // var formEmail = document.getElementById("formEmail");
+  var formValid = Array.prototype.slice.call(formIDs)
+  formValid = formValid.map(function(el){
+    if(el.nextSibling.className === "formError"){
+      el.nextSibling.remove();
+    }
+    if(el.value === ""){
+      showError(el);
+      return false;
+    }
+    return true;
+
+  });
+  console.log(formValid);
+  if(formValid.includes(false)){
+    return false
+  } else {
+    return true;
+  }
+
+  // console.log(nameValue, phoneValue, emailValue);
+  // if(formName.value === ""){
+  //   showError(formName);
+  //   return false;
+  // } else if(formPhone.value === "" || formPhone.value.length != 10) {
+  //   showError(formPhone);
+  //   return false;
+  // } else if(formEmail.value === "") {
+  //   showError(formEmail);
+  //   return false;
+  // }
+  // return true;
+
+}
+
+function showError (node) {
+
+  let span = document.createElement('span');
+  span.className = "formError";
+  span.textContent = "* Required";
+  node.parentNode.insertBefore(span,node.nextSibling);
 }

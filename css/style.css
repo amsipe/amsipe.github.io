@@ -180,6 +180,8 @@ header {
  /******GALLERY ***** */
 #content-gallery img {
 	max-width: 100%;
+	/*width: 200px;
+	height: 200px;*/
 }
 
 #content-gallery ul {
@@ -190,7 +192,7 @@ header {
 
 #content-gallery li {
 	float: left;
-	width: 45%;
+	width: 28.3333%;
 	margin: 2.5%;
 
 }
@@ -207,6 +209,7 @@ header {
 
 }
 
+/******FOOTER******/
 footer {
 	clear: both;
 	padding: 20px 0;
@@ -294,6 +297,7 @@ li.job-title > h3 {
 	background-color: #083470;
 	border-radius: 3px;
 	color: white;
+	cursor: pointer;
 	margin: 3px auto;
 	text-align: center;
 	line-height: 40px;
@@ -370,8 +374,12 @@ li.job-title > h3 {
 	border: 1px solid #ccc;
 	border-radius: 2px;
 	font-size: 14px;
+	padding-left: 8px;
 }
 
+#contactForm input::placeholder {
+	opacity: .25;
+}
 #contactForm h2 {
 	text-align: center;
 	margin: 0 auto;
@@ -383,11 +391,19 @@ li.job-title > h3 {
 	display: block;
 	font-size: 14px;
 	margin-top: 15px;
+	padding: 0;
 	width: 100px;
 	background-color: #1F44FF;
 	color: white;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+.formError {
+	font-size: 10px;
+	color: red;
+	padding-left: 5px;
+
 }
 
 
