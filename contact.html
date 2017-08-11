@@ -29,15 +29,15 @@
 	</header>
 	<div id="wrapper">
 		<div id="content-contact">
-			<form onsubmit="return checkFields();">
+			<form onsubmit="return checkFields(event)">
 				<div id="contactForm">
 					<h2>Contact Me</h2>
 					<label for="formName">Name:</label>
-					<input type="text" name="formName" id="formName">
+					<input type="text" name="formName" id="formName" placeholder="First & Last">
 					<label for="formPhone">Phone:</label>
-					<input type="text" name="formPhone" id="formPhone">
+					<input type="text" name="formPhone" id="formPhone" maxlength="10" placeholder="(   )-###-###">
 					<label for="formEmail">Email:</label>
-					<input type="text" name="formEmail" id="formEmail">
+					<input type="text" name="formEmail" id="formEmail" placeholder="Ex. hello@email.com">
 					<label for="formCompany">Company:</label>
 					<input type="text" name="formCompany" id="formCompany">
 					<label for="formText">Comments:</label>
