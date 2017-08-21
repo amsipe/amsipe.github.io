@@ -73,3 +73,26 @@ function showError (node) {
   span.textContent = "* Required";
   node.parentNode.insertBefore(span,node.nextSibling);
 }
+
+/******
+ GALLERY   
+ *******/
+
+var images = document.getElementsByClassName("thumb-img");
+var imageLbox = document.getElementById('lightbox-img');
+var boxContainer = document.querySelector('.container-lightbox');
+[...images].forEach(function(cur){
+  cur.addEventListener('click',function(e){
+    e.preventDefault();
+    var imgSrc = this.getAttribute('href');
+    imageLbox.setAttribute('src',imgSrc);
+    boxContainer.style.display = 'block';
+
+  })
+
+});
+
+document.getElementById('close-btn').addEventListener('click',function(e){
+  console.log(e);
+  boxContainer.style.display = 'none';
+})
