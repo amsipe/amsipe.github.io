@@ -4,13 +4,12 @@
 PROJECTS
 
 *******/
-var projectsList = document.querySelectorAll(".projects-list > li");
+var projectsList = document.querySelectorAll(".projects-list > li > span");
 
 //loop through all the LI elements
 projectsList.forEach(function(c){
 
   c.addEventListener('click',function(){
-    var sublistDisplay = this.nextElementSibling.style.display;
     //toggle display on/off
     this.nextElementSibling.classList.toggle("noneDisplay");
     this.classList.toggle("downArrow");
