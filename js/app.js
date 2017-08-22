@@ -4,13 +4,12 @@
 PROJECTS
 
 *******/
-var projectsList = document.querySelectorAll(".projects-list > li");
+var projectsList = document.querySelectorAll(".projects-list > li > span");
 
 //loop through all the LI elements
 projectsList.forEach(function(c){
 
   c.addEventListener('click',function(){
-    var sublistDisplay = this.nextElementSibling.style.display;
     //toggle display on/off
     this.nextElementSibling.classList.toggle("noneDisplay");
     this.classList.toggle("downArrow");
@@ -73,3 +72,26 @@ function showError (node) {
   span.textContent = "* Required";
   node.parentNode.insertBefore(span,node.nextSibling);
 }
+
+/******
+ GALLERY   
+ *******/
+
+var images = document.getElementsByClassName("thumb-img");
+var imageLbox = document.getElementById('lightbox-img');
+var boxContainer = document.querySelector('.container-lightbox');
+[...images].forEach(function(cur){
+  cur.addEventListener('click',function(e){
+    e.preventDefault();
+    var imgSrc = this.getAttribute('href');
+    imageLbox.setAttribute('src',imgSrc);
+    boxContainer.style.display = 'block';
+
+  })
+
+});
+
+document.getElementById('close-btn').addEventListener('click',function(e){
+  console.log(e);
+  boxContainer.style.display = 'none';
+})
