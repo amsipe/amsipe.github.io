@@ -19,6 +19,16 @@ projectsList.forEach(function(c){
 
 });
 
+var video = $(".video-hover").hover(playVid,pauseVid);
+
+function playVid(e) {
+  this.play();
+}
+
+function pauseVid(e) {
+  this.pause();
+}
+
 
 /*****
 CONTACT FORM
@@ -50,19 +60,6 @@ function checkFields(e){
     return true;
   }
 
-  // console.log(nameValue, phoneValue, emailValue);
-  // if(formName.value === ""){
-  //   showError(formName);
-  //   return false;
-  // } else if(formPhone.value === "" || formPhone.value.length != 10) {
-  //   showError(formPhone);
-  //   return false;
-  // } else if(formEmail.value === "") {
-  //   showError(formEmail);
-  //   return false;
-  // }
-  // return true;
-
 }
 
 function showError (node) {
@@ -91,7 +88,3 @@ var boxContainer = document.querySelector('.container-lightbox');
 
 });
 
-document.getElementById('close-btn').addEventListener('click',function(e){
-  console.log(e);
-  boxContainer.style.display = 'none';
-})
