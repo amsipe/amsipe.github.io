@@ -383,7 +383,7 @@ ul.assorted-projects {
 }
 
 .assorted-projects-container h3 {
-	margin: 0 10px;
+	margin: 10px 0 !important;
 }
 
 ul.assorted-projects {
